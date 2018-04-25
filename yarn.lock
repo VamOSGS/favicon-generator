@@ -4130,6 +4130,10 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
+konva@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/konva/-/konva-2.0.3.tgz#80c8b8d0f2ba4b93b8cc86b10c3aabd2438dfaf6"
+
 lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
@@ -5810,6 +5814,22 @@ react-hot-loader@^4.0.0:
     hoist-non-react-statics "^2.5.0"
     prop-types "^15.6.0"
     shallowequal "^1.0.2"
+
+react-konva@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/react-konva/-/react-konva-1.7.2.tgz#55f640acfbea723139198274e18aa951d7937fff"
+  dependencies:
+    fbjs "^0.8.16"
+    react-reconciler "^0.9.0"
+
+react-reconciler@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.9.0.tgz#759d39f2ecd2fcb58e5fe0015ecb1c2da642f8a1"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 react-redux@^5.0.7:
   version "5.0.7"

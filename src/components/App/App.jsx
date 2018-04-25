@@ -1,9 +1,11 @@
 import React from 'react';
 import './AppStyles.less';
+import Canvas from '../Canvas';
 
 const App = () => (
   <div className="App">
-    App Component
+    App Componen
+    <Canvas />
   </div>
 );
 

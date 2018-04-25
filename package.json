@@ -43,9 +43,11 @@
   },
   "dependencies": {
     "dotenv": "^5.0.1",
+    "konva": "^2.0.3",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-hot-loader": "^4.0.0",
+    "react-konva": "^1.7.2",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2"
   }
