@@ -5,7 +5,7 @@ const initialState = {
   text: {
     fontSize: 36,
     fontFamliy: 'Segoe UI',
-    value: 'FasG',
+    value: 'F',
     color: 'red',
   },
 };
