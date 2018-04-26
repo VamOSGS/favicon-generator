@@ -1,10 +1,10 @@
 import * as types from '../constants';
 
-export const updateValue = payload => ({
-  type: types.UPDATE_VALUE,
+export const updateText = payload => ({
+  type: types.UPDATE_TEXT,
   payload,
 });
-export const test = payload => ({
-  type: types.TEST,
+export const updateBackground = payload => ({
+  type: types.UPDATE_BACKGROUND,
   payload,
 });

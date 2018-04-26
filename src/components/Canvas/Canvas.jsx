@@ -1,7 +1,7 @@
 import React from 'react';
 import { Stage, Layer, Rect, Text } from 'react-konva';
 import Konva from 'konva';
-import { Button } from 'react-uwp';
+import { Button, Icon } from 'react-uwp';
 import './CanvasStyles.less';
 
 class Canvas extends React.Component {
@@ -12,15 +12,9 @@ class Canvas extends React.Component {
     const {
       fontSize, fontFamily, value, color,
     } = this.props.settings.text;
-    const { size } = this.props.settings;
-    console.log(this.textNode !== undefined ? this.textNode.textWidth : '');
+    const { size, backgroundColor } = this.props.settings;
     return (
       <div className="Canvas">
-        <div className="download">
-          <a href="/download" ref={node => (this.downloadButton = node)} download="favicon.ico">
-            <Button onClick={this.handleDownload}>Download</Button>
-          </a>
-        </div>
         <Stage
           ref={(node) => {
             this.stage = node;
@@ -29,6 +23,7 @@ class Canvas extends React.Component {
           height={size}
         >
           <Layer>
+            <Rect x={0} y={0} width={size} height={size} fill={backgroundColor} />
             <Text
               ref={(node) => {
                 this.textNode = node;
@@ -44,6 +39,17 @@ class Canvas extends React.Component {
             />
           </Layer>
         </Stage>
+        <div className="download">
+          <a href="/download" ref={node => (this.downloadButton = node)} download="favicon.ico">
+            <Button
+              icon="Download"
+              iconPosition="right"
+              onClick={this.handleDownload}
+            >
+              Download{' '}
+            </Button>
+          </a>
+        </div>
       </div>
     );
   }
