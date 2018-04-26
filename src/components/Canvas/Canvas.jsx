@@ -5,7 +5,7 @@ import { Button } from 'react-uwp';
 import './CanvasStyles.less';
 
 class Canvas extends React.Component {
-  handle = () => {
+  handleDownload = () => {
     this.downloadButton.href = this.stage.getStage().toDataURL();
   };
   render() {
@@ -16,12 +16,11 @@ class Canvas extends React.Component {
     console.log(this.textNode !== undefined ? this.textNode.textWidth : '');
     return (
       <div className="Canvas">
-        {/* eslint-disable */}
-        <a ref={node => (this.downloadButton = node)} onClick={this.handle} download="favicon.png">
-          <Button>Download</Button>
-        </a>
-        {/* eslint-enable */}
-
+        <div className="download">
+          <a href="/download" ref={node => (this.downloadButton = node)} download="favicon.ico">
+            <Button onClick={this.handleDownload}>Download</Button>
+          </a>
+        </div>
         <Stage
           ref={(node) => {
             this.stage = node;
