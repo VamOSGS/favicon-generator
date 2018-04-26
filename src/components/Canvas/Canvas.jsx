@@ -1,7 +1,6 @@
 import React from 'react';
 import { Stage, Layer, Rect, Text } from 'react-konva';
-import Konva from 'konva';
-import { Button, Icon } from 'react-uwp';
+import { Button } from 'react-uwp';
 import './CanvasStyles.less';
 
 class Canvas extends React.Component {
@@ -13,6 +12,9 @@ class Canvas extends React.Component {
       fontSize, fontFamily, value, color,
     } = this.props.settings.text;
     const { size, backgroundColor } = this.props.settings;
+    const textWidth = this.textNode ? this.textNode.textWidth : 44;
+    const textHeight = this.textNode ? this.textNode.textHeight : fontSize;
+    console.log(textHeight);
     return (
       <div className="Canvas">
         <Stage
@@ -28,12 +30,12 @@ class Canvas extends React.Component {
               ref={(node) => {
                 this.textNode = node;
               }}
-              offsetX={(this.textNode ? this.textNode.textWidth : 44) / 2}
-              offsetY={(this.textNode ? this.textNode.textHeight : fontSize) / 2}
+              offsetY={textHeight / 2}
+              offsetX={textWidth / 2}
               x={size / 2}
               y={size / 2}
               fill={color}
-              fontSize={fontSize}
+              fontSize={parseInt(fontSize, 10)}
               fontFamily={fontFamily}
               text={value}
             />
