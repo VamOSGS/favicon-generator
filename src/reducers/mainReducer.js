@@ -1,16 +1,19 @@
+import * as types from '../constants';
+
 const initialState = {
   size: 128,
   text: {
     fontSize: 36,
-    fontFamliy: 'Calibri',
-    value: 'FG',
+    fontFamliy: 'Segoe UI',
+    value: 'FasG',
     color: 'red',
   },
 };
 
 const mainReducer = (state = initialState, action) => {
   switch (action.type) {
-    // Your cases here
+    case types.UPDATE_VALUE:
+      return { ...state, text: { ...state.text, [action.payload.field]: action.payload.value } };
 
     default:
       return state;

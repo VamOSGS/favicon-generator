@@ -1,10 +1,12 @@
 import React from 'react';
 import './AppStyles.less';
 import Canvas from '../Canvas';
+import Form from '../Form';
 
 const App = () => (
   <div className="App">
-    App Componen
+    Favicon generator
+    <Form />
     <Canvas />
   </div>
 );

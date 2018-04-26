@@ -49,6 +49,7 @@
     "react-hot-loader": "^4.0.0",
     "react-konva": "^1.7.2",
     "react-redux": "^5.0.7",
+    "react-uwp": "^1.1.8",
     "redux": "^3.7.2"
   }
 }

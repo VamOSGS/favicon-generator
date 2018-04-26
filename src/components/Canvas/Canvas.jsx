@@ -13,9 +13,9 @@ const Canvas = ({ settings }) => {
       <Stage width={size} height={size}>
         <Layer>
           <Text
-            x={size / 2}
-            y={size / 2}
-            offset="center"
+            x={30}
+            y={30}
+            opacity={0.5}
             fill={color}
             fontSize={fontSize}
             fontFamily={fontFamily}
