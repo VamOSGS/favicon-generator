@@ -5,7 +5,7 @@ import Form from '../Form';
 
 const App = () => (
   <div className="App">
-    Favicon generator
+    <h1> Favicon generator </h1>
     <Form />
     <Canvas />
   </div>

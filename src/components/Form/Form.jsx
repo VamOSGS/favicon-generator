@@ -9,7 +9,6 @@ const Form = ({ updateValue, settings }) => {
   };
   return (
     <div className="Form">
-      <h2>form</h2>
       <TextBox
         onChangeValue={value => handleChange({ field: 'value', value })}
         background="none"
@@ -17,13 +16,12 @@ const Form = ({ updateValue, settings }) => {
       />
       <div>
         <Slider
-          numberToFixed={2}
-          initValue={32}
+          initValue={settings.text.fontSize}
           minValue={12}
           maxValue={200}
           onChangeValue={value => handleChange({ field: 'fontSize', value })}
         />
-        <span>nice</span>
+        <span>{settings.text.fontSize.toFixed(0)}px</span>
       </div>
     </div>
   );
