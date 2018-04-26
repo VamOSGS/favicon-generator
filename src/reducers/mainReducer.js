@@ -3,12 +3,12 @@ import fonts from '../assets/fonts';
 
 const initialState = {
   size: 128,
-  backgroundColor: 'black',
+  backgroundColor: '#0078D7',
   text: {
-    fontSize: 36,
+    fontSize: 64,
     fontFamily: fonts[0],
     value: 'F',
-    color: 'red',
+    color: 'white',
   },
 };
 

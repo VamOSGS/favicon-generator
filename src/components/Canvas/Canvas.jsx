@@ -28,7 +28,7 @@ class Canvas extends React.Component {
               ref={(node) => {
                 this.textNode = node;
               }}
-              offsetX={(this.textNode ? this.textNode.textWidth : 22) / 2}
+              offsetX={(this.textNode ? this.textNode.textWidth : 44) / 2}
               offsetY={(this.textNode ? this.textNode.textHeight : fontSize) / 2}
               x={size / 2}
               y={size / 2}
@@ -41,12 +41,8 @@ class Canvas extends React.Component {
         </Stage>
         <div className="download">
           <a href="/download" ref={node => (this.downloadButton = node)} download="favicon.ico">
-            <Button
-              icon="Download"
-              iconPosition="right"
-              onClick={this.handleDownload}
-            >
-              Download{' '}
+            <Button icon="Download" iconPosition="right" onClick={this.handleDownload}>
+              Download
             </Button>
           </a>
         </div>

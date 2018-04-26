@@ -4,8 +4,18 @@
   .field {
     margin: 10px auto;
     &.Size {
-      > span {
-        margin-left: 15px;
+      > div {
+        display: flex;
+        .ftzInput {
+          width: 60px;
+          margin-left: 15px;
+        }
+      }
+    }
+    &.Color {
+      display: flex;
+      > div {
+        margin: 0 5px;
       }
     }
   }

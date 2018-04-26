@@ -1,5 +1,4 @@
-// flow
-import React, { Component } from 'react';
+import React from 'react';
 import Text from './Text';
 import Slider from './Slider';
 import Font from './Font';
