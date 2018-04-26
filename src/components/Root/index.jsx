@@ -10,7 +10,7 @@ const Root = () => (
   <Provider store={store}>
     <UWPThemeProvider
       theme={getTheme({
-        themeName: 'dark',
+        themeName: 'light',
         accent: '#0078D7',
         useFluentDesign: true,
       })}

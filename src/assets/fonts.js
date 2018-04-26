@@ -1,1 +1,1 @@
-export default ['Arial', 'Helvetica', 'Impact', 'Trebuchet MS', 'Colibri', 'Courier New'];
+export default ['Arial', 'Impact', 'Trebuchet MS', 'Colibri', 'Courier New'];
