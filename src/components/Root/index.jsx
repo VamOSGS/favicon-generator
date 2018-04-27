@@ -6,6 +6,7 @@ import App from '../App';
 import configureStore from '../../store';
 
 const store = configureStore();
+
 const Root = () => (
   <Provider store={store}>
     <UWPThemeProvider

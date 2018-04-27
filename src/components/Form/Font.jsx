@@ -1,6 +1,6 @@
 import React from 'react';
 import { DropDownMenu } from 'react-uwp';
-import fonts from '../../assets/fonts';
+import { fonts } from '../../assets';
 
 let fontList = fonts;
 

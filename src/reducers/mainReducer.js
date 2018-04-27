@@ -1,5 +1,5 @@
 import * as types from '../constants';
-import fonts from '../assets/fonts';
+import { fonts } from '../assets';
 
 const initialState = {
   size: 128,

@@ -1,1 +1,3 @@
-export default ['Arial', 'Impact', 'Trebuchet MS', 'Colibri', 'Courier New'];
+export const GoogleFonts = ['Lobster', 'Roboto', 'Titan One'];
+
+export default [...GoogleFonts, 'Arial', 'Impact', 'system-ui', 'Trebuchet MS', 'Courier New'];
