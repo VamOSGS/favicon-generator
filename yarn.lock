@@ -1095,7 +1095,7 @@ babel-register@^6.26.0, babel-register@^6.9.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
+babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0, babel-runtime@^6.6.1:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -5969,6 +5969,12 @@ react-lazyload@^2.2.7:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-2.3.0.tgz#ccb134223012447074a96543954f44b055dc6185"
 
+react-loader-spinner@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-loader-spinner/-/react-loader-spinner-2.0.0.tgz#916d268e1974126a3beb82bb7816460fe1e215b5"
+  dependencies:
+    babel-runtime "^6.6.1"
+
 react-player@^0.20.0:
   version "0.20.0"
   resolved "https://registry.yarnpkg.com/react-player/-/react-player-0.20.0.tgz#61ba61b0a0c03a9a0e5e45ee70b40fb82eab56bd"
@@ -7496,7 +7502,7 @@ wbuf@^1.1.0, wbuf@^1.7.2:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-webfontloader@^1.6.27, webfontloader@^1.6.28:
+webfontloader@^1.6.27:
   version "1.6.28"
   resolved "https://registry.yarnpkg.com/webfontloader/-/webfontloader-1.6.28.tgz#db786129253cb6e8eae54c2fb05f870af6675bae"
 

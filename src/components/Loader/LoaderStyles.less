@@ -1,0 +1,21 @@
+/* Styles of Loader Component */
+.Loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: rgb(245, 245, 245);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s, visibility .3s linear 2s;
+  // transition: opacity 3.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s, visability 5s linear 5s;
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &.loading {
+    opacity: 1;
+    visibility: visible;
+  }
+}
