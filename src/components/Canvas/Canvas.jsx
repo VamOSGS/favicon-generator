@@ -32,6 +32,8 @@ class Canvas extends React.Component {
     } = this.props.settings.text;
     const { size, backgroundColor } = this.props.settings;
     const textHeight = this.textNode ? this.textNode.textHeight : fontSize;
+    const textWidthNode = this.textNode ? this.textNode.textWidth : 44;
+    console.log(textWidth);
     return (
       <div className="Canvas">
         <Stage
@@ -51,6 +53,7 @@ class Canvas extends React.Component {
                       this.textNode = node;
                     }}
                     offsetY={textHeight / 2}
+                    // offsetX={(this.state.useTextNode ? textWidthNode : textWidth) / 2}
                     offsetX={textWidth / 2}
                     x={size / 2}
                     y={size / 2}

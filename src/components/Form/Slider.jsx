@@ -10,7 +10,7 @@ const SliderComponent = ({ settings, handleChange }) => (
         initValue={settings.text.fontSize}
         minValue={12}
         maxValue={200}
-        onChangeValue={value =>
+        onChangedValue={value =>
           handleChange({ field: 'fontSize', value: parseInt(value, 10) }, UPDATE_SIZE)
         }
       />
