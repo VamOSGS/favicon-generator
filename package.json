@@ -52,7 +52,6 @@
     "react-konva": "^1.7.2",
     "react-redux": "^5.0.7",
     "react-uwp": "^1.1.8",
-    "redux": "^3.7.2",
-    "webfontloader": "^1.6.28"
+    "redux": "^3.7.2"
   }
 }

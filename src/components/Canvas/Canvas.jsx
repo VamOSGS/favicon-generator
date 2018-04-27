@@ -27,7 +27,7 @@ class Canvas extends React.Component {
   };
   render() {
     const {
-      fontSize, fontFamily, value, color,
+      fontSize, fontFamily, value, color, offsetX, offsetY,
     } = this.props.settings.text;
     const { size, backgroundColor } = this.props.settings;
     const textWidth = this.textNode ? this.textNode.getTextWidth() : 44;
@@ -50,8 +50,8 @@ class Canvas extends React.Component {
                     ref={(node) => {
                       this.textNode = node;
                     }}
-                    offsetY={textHeight / 2}
-                    offsetX={textWidth / 2}
+                    offsetY={offsetY / 2}
+                    offsetX={offsetX / 2}
                     x={size / 2}
                     y={size / 2}
                     fill={color}

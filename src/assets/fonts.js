@@ -1,3 +1,3 @@
-export const GoogleFonts = ['Lobster', 'Roboto', 'Titan One'];
+export const GoogleFonts = ['Lobster', 'Roboto', 'Cinzel', 'Permanent Marker', 'ABeeZee'];
 
 export default [...GoogleFonts, 'Arial', 'Impact', 'system-ui', 'Trebuchet MS', 'Courier New'];

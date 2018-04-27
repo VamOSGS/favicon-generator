@@ -1,12 +1,10 @@
 import React from 'react';
 import { ChromePicker } from 'react-color';
-import fonts from '../../assets/fonts';
+import { UPDATE_COLOR } from '../../constants';
 
-const fontList = fonts;
-
-const Font = ({ updateText, updateBackground, settings }) => {
+const Color = ({ updateText, updateBackground, settings }) => {
   const colorChange = (color) => {
-    updateText({ field: 'color', value: color.hex });
+    updateText({ field: 'color', value: color.hex }, UPDATE_COLOR);
   };
   const bgColorChange = (color) => {
     updateBackground({ field: 'backgroundColor', value: color.hex });
@@ -25,4 +23,4 @@ const Font = ({ updateText, updateBackground, settings }) => {
   );
 };
 
-export default Font;
+export default Color;

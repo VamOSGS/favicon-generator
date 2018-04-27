@@ -1,5 +1,6 @@
 import React from 'react';
 import { Slider, TextBox } from 'react-uwp';
+import { UPDATE_SIZE } from '../../constants';
 
 const SliderComponent = ({ settings, handleChange }) => (
   <div className="field Size">
@@ -9,10 +10,12 @@ const SliderComponent = ({ settings, handleChange }) => (
         initValue={settings.text.fontSize}
         minValue={12}
         maxValue={200}
-        onChangeValue={value => handleChange({ field: 'fontSize', value: parseInt(value, 10) })}
+        onChangeValue={value =>
+          handleChange({ field: 'fontSize', value: parseInt(value, 10) }, UPDATE_SIZE)
+        }
       />
       <TextBox
-        onChangeValue={value => handleChange({ field: 'fontSize', value })}
+        onChangeValue={value => handleChange({ field: 'fontSize', value }, UPDATE_SIZE)}
         className="ftzInput"
         value={parseInt(settings.text.fontSize, 10)}
         type="number"

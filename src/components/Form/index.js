@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import Form from './Form';
-import { updateText, updateBackground } from '../../actions';
+import { update, updateBackground } from '../../actions';
 
 const mapStateToProps = ({ mainReducer }) => ({
   settings: mainReducer,
 });
 
 const mapDispatchToProps = dispatch => ({
-  updateText: params => dispatch(updateText(params)),
+  updateText: (params, type) => dispatch(update(params, type)),
   updateBackground: params => dispatch(updateBackground(params)),
 });
 
