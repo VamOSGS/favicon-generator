@@ -10,12 +10,11 @@ const SliderComponent = ({ settings, handleChange }) => (
         initValue={settings.text.fontSize}
         minValue={12}
         maxValue={200}
-        onChangedValue={value =>
-          handleChange({ field: 'fontSize', value: parseInt(value, 10) }, UPDATE_SIZE)
-        }
+        useSimpleController
+        onChangeValue={value => handleChange(parseInt(value, 10), UPDATE_SIZE)}
       />
       <TextBox
-        onChangeValue={value => handleChange({ field: 'fontSize', value }, UPDATE_SIZE)}
+        onChangeValue={value => handleChange(value, UPDATE_SIZE)}
         className="ftzInput"
         value={parseInt(settings.text.fontSize, 10)}
         type="number"

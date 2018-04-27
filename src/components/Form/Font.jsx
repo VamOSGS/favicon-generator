@@ -7,7 +7,7 @@ let fontList = fonts;
 
 const Font = ({ handleChange }) => {
   const fontChange = (value) => {
-    handleChange({ field: 'fontFamily', value }, UPDATE_FONT);
+    handleChange(value, UPDATE_FONT);
     fontList = [value, ...fontList.filter(font => font !== value)];
   };
   return (

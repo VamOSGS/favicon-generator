@@ -7,7 +7,7 @@ const mapStateToProps = ({ mainReducer }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  updateText: (params, type) => dispatch(update(params, type)),
+  updateText: (value, type) => dispatch(update(value, type)),
   updateBackground: params => dispatch(updateBackground(params)),
 });
 

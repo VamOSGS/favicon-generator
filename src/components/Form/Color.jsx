@@ -3,9 +3,7 @@ import { ChromePicker } from 'react-color';
 import { UPDATE_COLOR } from '../../constants';
 
 const Color = ({ updateText, updateBackground, settings }) => {
-  const colorChange = (color) => {
-    updateText({ field: 'color', value: color.hex }, UPDATE_COLOR);
-  };
+  const colorChange = color => updateText(color.hex, UPDATE_COLOR);
   const bgColorChange = (color) => {
     updateBackground({ field: 'backgroundColor', value: color.hex });
   };

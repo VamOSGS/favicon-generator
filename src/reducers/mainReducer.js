@@ -26,9 +26,9 @@ const mainReducer = (state = initialState, action) => {
         useTextNode: false,
         text: {
           ...state.text,
-          value: action.payload.value,
+          value: action.payload,
           textWidth: calculateWidth(
-            action.payload.value,
+            action.payload,
             state.text.fontFamily,
             state.text.fontSize,
           ),
@@ -37,7 +37,7 @@ const mainReducer = (state = initialState, action) => {
     case types.UPDATE_COLOR:
       return {
         ...state,
-        text: { ...state.text, color: action.payload.value },
+        text: { ...state.text, color: action.payload },
       };
     case types.UPDATE_FONT:
       return {
@@ -47,13 +47,14 @@ const mainReducer = (state = initialState, action) => {
         text: { ...state.text, fontFamily: action.payload.value },
       };
     case types.UPDATE_SIZE:
+      console.log(action);
       return {
         ...state,
         useTextNode: true,
         text: {
           ...state.text,
-          textWidth: calculateWidth(state.text.value, state.text.fontFamily, action.payload.value),
-          fontSize: action.payload.value,
+          textWidth: calculateWidth(state.text.value, state.text.fontFamily, action.payload),
+          fontSize: action.payload,
         },
       };
     case types.UPDATE_BACKGROUND:
