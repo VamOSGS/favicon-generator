@@ -5,7 +5,7 @@ import { calculateWidth } from '../utils';
 const initialState = {
   size: 128,
   backgroundColor: '#0078D7',
-  background: true,
+  background: false,
   text: {
     fontSize: 64,
     fontFamily: fonts[0],
@@ -52,8 +52,10 @@ const mainReducer = (state = initialState, action) => {
           fontSize: action.payload,
         },
       };
-    case types.UPDATE_BACKGROUND:
-      return { ...state, [action.payload.field]: action.payload.value };
+    case types.BACKGROUND:
+      return { ...state, background: action.payload };
+    case types.BACKGROUND_COLOR:
+      return { ...state, backgroundColor: action.payload };
     default:
       return state;
   }

@@ -5,12 +5,12 @@ import Font from './Font';
 import Color from './Color';
 import './FormStyles.less';
 
-const Form = ({ updateText, updateBackground, settings }) => (
+const Form = ({ update, settings }) => (
   <div className="Form">
-    <Text handleChange={updateText} settings={settings} />
-    <Slider handleChange={updateText} settings={settings} />
-    <Font handleChange={updateText} />
-    <Color updateBackground={updateBackground} settings={settings} updateText={updateText} />
+    <Text handleChange={update} settings={settings} />
+    <Slider handleChange={update} settings={settings} />
+    <Font handleChange={update} />
+    <Color settings={settings} update={update} />
   </div>
 );
 

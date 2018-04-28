@@ -2,15 +2,15 @@ import React from 'react';
 import { ChromePicker } from 'react-color';
 import { Toggle } from 'react-uwp';
 import Separator from 'react-uwp/Separator';
-import { UPDATE_COLOR } from '../../constants';
+import { UPDATE_COLOR, BACKGROUND_COLOR, BACKGROUND } from '../../constants';
 
-const Color = ({ updateText, updateBackground, settings }) => {
-  const colorChange = color => updateText(color.hex, UPDATE_COLOR);
+const Color = ({ update, settings }) => {
+  const colorChange = color => update(color.hex, UPDATE_COLOR);
   const bgColorChange = (color) => {
-    updateBackground({ field: 'backgroundColor', value: color.hex });
+    update(color.hex, BACKGROUND_COLOR);
   };
   const toggleBackground = () => {
-    updateBackground({ field: 'background', value: !settings.background });
+    update(!settings.background, BACKGROUND);
   };
   return (
     <div className="field Color">

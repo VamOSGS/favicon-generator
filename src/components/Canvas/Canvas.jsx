@@ -19,7 +19,6 @@ class Canvas extends React.Component {
     };
   }
   componentDidUpdate() {
-    console.log(this.state.loaded)
     if (this.state.loaded === true) {
       changeFavicon(this.stage.getStage().toDataURL());
     }

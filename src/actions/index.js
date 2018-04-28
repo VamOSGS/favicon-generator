@@ -5,11 +5,6 @@ export const update = (payload, type) => ({
   payload,
 });
 
-export const updateBackground = payload => ({
-  type: types.UPDATE_BACKGROUND,
-  payload,
-});
-
 export const load = () => ({
   type: types.LOAD,
 });

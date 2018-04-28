@@ -6,7 +6,6 @@ export function calculateWidth(text, fontFamily, fontSize) {
 }
 
 export function changeFavicon(data) {
-  console.log('changeFavicon');
   const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
   link.type = 'image/x-icon';
   link.rel = 'shortcut icon';
