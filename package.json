@@ -43,9 +43,6 @@
   },
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
-    "carbon-components": "^8.18.18",
-    "carbon-components-react": "^5.44.0",
-    "carbon-icons": "^6.3.2",
     "dotenv": "^5.0.1",
     "konva": "^2.0.3",
     "react": "^16.3.0",

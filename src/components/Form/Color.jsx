@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChromePicker } from 'react-color';
-import { Toggle, Icon } from 'react-uwp';
+import { Toggle } from 'react-uwp';
 import Separator from 'react-uwp/Separator';
 import { UPDATE_COLOR } from '../../constants';
 
@@ -14,6 +14,11 @@ const Color = ({ updateText, updateBackground, settings }) => {
   };
   return (
     <div className="field Color">
+      <div className="check" onClick={toggleBackground}>
+        <h2>Background</h2>
+        <Toggle checked={settings.background} size={21} defaultToggled={settings.background} />
+      </div>
+      <Separator />
       <div className="textColor">
         <div className="heading">
           <div style={{ background: settings.text.color }} className="cover" />
@@ -21,11 +26,7 @@ const Color = ({ updateText, updateBackground, settings }) => {
         </div>
         <ChromePicker disableAlpha color={settings.text.color} onChange={colorChange} />
       </div>
-      <Separator disabled />
-      <div className="check" onClick={toggleBackground}>
-        <h2>Background</h2>
-        <Toggle checked={settings.background} size={21} defaultToggled={settings.background} />
-      </div>
+
       {settings.background && (
         <div className="bgColor">
           <div className="heading">

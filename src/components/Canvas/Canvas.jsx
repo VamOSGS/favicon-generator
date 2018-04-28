@@ -2,6 +2,7 @@ import React from 'react';
 import { Stage, Layer, Rect, Text } from 'react-konva';
 import WebfontLoader from '@dr-kobros/react-webfont-loader';
 import { Button } from 'react-uwp';
+import { changeFavicon } from '../../utils';
 import { GoogleFonts } from '../../assets';
 import './CanvasStyles.less';
 
@@ -17,6 +18,12 @@ class Canvas extends React.Component {
       },
     };
   }
+  componentDidUpdate() {
+    console.log(this.state.loaded)
+    if (this.state.loaded === true) {
+      changeFavicon(this.stage.getStage().toDataURL());
+    }
+  }
   handleDownload = () => {
     this.downloadButton.href = this.stage.getStage().toDataURL();
   };
@@ -24,6 +31,7 @@ class Canvas extends React.Component {
     if (status === 'active') {
       this.setState({ loaded: true });
       this.props.load();
+      // changeFavicon(this.stage.getStage().toDataURL());
     }
   };
   render() {
@@ -31,6 +39,7 @@ class Canvas extends React.Component {
       fontSize, fontFamily, value, color, textWidth,
     } = this.props.settings.text;
     const { size, backgroundColor, background } = this.props.settings;
+    const { loaded, config } = this.state;
     return (
       <div className="Canvas">
         <Stage
@@ -39,12 +48,13 @@ class Canvas extends React.Component {
           }}
           width={size}
           height={size}
+          onChange={() => console.log('FUCKA')}
         >
           <Layer>
             {background && <Rect x={0} y={0} width={size} height={size} fill={backgroundColor} />}
-            <WebfontLoader config={this.state.config} onStatus={this.handleLoad}>
+            <WebfontLoader config={config} onStatus={this.handleLoad}>
               <React.Fragment>
-                {this.state.loaded && (
+                {loaded && (
                   <Text
                     fill={color}
                     fontSize={parseInt(fontSize, 10)}
@@ -64,11 +74,7 @@ class Canvas extends React.Component {
         </Stage>
         <div className="download">
           <a href="/download" ref={node => (this.downloadButton = node)} download="favicon.ico">
-            <Button
-              icon="Download"
-              iconPosition="right"
-              onClick={this.handleDownload}
-            >
+            <Button icon="Download" iconPosition="right" onClick={this.handleDownload}>
               Download
             </Button>
           </a>
