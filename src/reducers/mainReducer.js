@@ -5,12 +5,12 @@ import { calculateWidth } from '../utils';
 const initialState = {
   size: 128,
   backgroundColor: '#0078D7',
-  useTextNode: false,
+  background: true,
   text: {
     fontSize: 64,
     fontFamily: fonts[0],
     value: 'F',
-    color: 'white',
+    color: '#E2E2E2',
   },
 };
 initialState.text.textWidth = calculateWidth(
@@ -23,15 +23,10 @@ const mainReducer = (state = initialState, action) => {
     case types.UPDATE_TEXT:
       return {
         ...state,
-        useTextNode: false,
         text: {
           ...state.text,
           value: action.payload,
-          textWidth: calculateWidth(
-            action.payload,
-            state.text.fontFamily,
-            state.text.fontSize,
-          ),
+          textWidth: calculateWidth(action.payload, state.text.fontFamily, state.text.fontSize),
         },
       };
     case types.UPDATE_COLOR:
@@ -42,15 +37,15 @@ const mainReducer = (state = initialState, action) => {
     case types.UPDATE_FONT:
       return {
         ...state,
-        useTextNode: false,
-        textWidth: calculateWidth(state.text.value, action.payload.value, state.text.fontSize),
-        text: { ...state.text, fontFamily: action.payload.value },
+        text: {
+          ...state.text,
+          textWidth: calculateWidth(state.text.value, action.payload, state.text.fontSize),
+          fontFamily: action.payload,
+        },
       };
     case types.UPDATE_SIZE:
-      console.log(action);
       return {
         ...state,
-        useTextNode: true,
         text: {
           ...state.text,
           textWidth: calculateWidth(state.text.value, state.text.fontFamily, action.payload),

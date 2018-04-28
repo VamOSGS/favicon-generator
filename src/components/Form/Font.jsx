@@ -13,7 +13,7 @@ const Font = ({ handleChange }) => {
   return (
     <div className="field Font">
       <h2>Font</h2>
-      <DropDownMenu itemWidth={290} values={fontList} onChangeValue={fontChange} />
+      <DropDownMenu itemHeight={40} itemWidth={302} values={fontList} onChangeValue={fontChange} />
     </div>
   );
 };

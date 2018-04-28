@@ -7,7 +7,7 @@ import Loader from '../Loader';
 const App = () => (
   <div className="App">
     <Loader />
-    <h1>Favicon generator</h1>
+    <h1>Favicon Generator</h1>
     <Canvas />
     <Form />
   </div>
