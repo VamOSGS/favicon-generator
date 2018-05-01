@@ -18,11 +18,6 @@ class Canvas extends React.Component {
       },
     };
   }
-  componentDidUpdate() {
-    if (this.state.loaded === true) {
-      changeFavicon(this.stage.getStage().toDataURL());
-    }
-  }
   handleDownload = () => {
     this.downloadButton.href = this.stage.getStage().toDataURL();
   };

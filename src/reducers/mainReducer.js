@@ -5,7 +5,7 @@ import { calculateWidth } from '../utils';
 const initialState = {
   size: 128,
   backgroundColor: '#0078D7',
-  background: false,
+  background: true,
   text: {
     fontSize: 64,
     fontFamily: fonts[0],

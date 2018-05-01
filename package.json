@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack/webpack.config.js --hot",
     "build": "webpack --config webpack/webpack.config.js",
-    "gen": "plop --plopfile ./internals/generators/index.js"
+    "gen": "plop --plopfile ./internals/generators/index.js",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "favicon",
@@ -44,7 +45,7 @@
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
     "dotenv": "^5.0.1",
-    "github-pages": "^3.0.2",
+    "gh-pages": "^1.1.0",
     "konva": "^2.0.3",
     "react": "^16.3.0",
     "react-color": "^2.14.1",

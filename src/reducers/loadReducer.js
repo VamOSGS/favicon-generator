@@ -1,6 +1,6 @@
 import { LOAD } from '../constants';
 
-const loaded = true;
+const loaded = false;
 
 const loadReducer = (state = loaded, action) => {
   switch (action.type) {
