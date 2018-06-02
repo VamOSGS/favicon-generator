@@ -6,13 +6,13 @@ const SliderComponent = ({ settings, handleChange }) => (
   <div className="field Size">
     <h2>Font-size</h2>
     <div>
-      <Slider
+      {/* <Slider
         initValue={settings.text.fontSize}
         minValue={12}
         maxValue={200}
         useSimpleController
         onChangeValue={value => handleChange(parseInt(value, 10), UPDATE_SIZE)}
-      />
+      /> */}
       <TextBox
         onChangeValue={value => handleChange(value, UPDATE_SIZE)}
         className="ftzInput"

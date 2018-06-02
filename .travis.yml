@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - 9 
+cache:
+  directories:
+    - "node_modules"
+script: 
+  - ENV=PROD yarn build
+deploy:
+  skip_cleanup: true
+  provider: pages
+  github_token: $GITHUB_TOKEN
+  local_dir: dist
+  on:
+    branch: master
+    
